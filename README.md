@@ -41,9 +41,12 @@ A real-time **system monitoring dashboard** that tracks CPU, Memory, Disk, and N
 |------------------------------------------------------------------------------------------------------|
 |<img width="438" height="379" alt="image" src="https://github.com/user-attachments/assets/7cafede6-e07a-44f8-8fa5-7a172e4e2e09" />|
 
-| CPU Load-III                                          | Auto-Refreshing Every 3 Seconds                                      |
-| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| CPU Load-III                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------- |
 | <img width="461" height="411" alt="image" src="https://github.com/user-attachments/assets/a61320a1-6b42-438e-859a-17be58ffc919" />|
+
+| Auto-Refreshing Every 3 Seconds                                      |
+|----------------------------------------------------------------------|
 | System updates continuously with fresh stats (no page reload needed) |
 
 🕒 **Auto-Refresh Interval:** every **3 seconds** (asynchronous fetch from `/data`)
