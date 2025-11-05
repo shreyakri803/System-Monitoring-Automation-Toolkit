@@ -113,7 +113,7 @@ psutil → live metrics → memory + CSV
 ### 1) Clone Repo
 
 ```bash
-git clone https://github.com/shreyakri803/system-monitor.git
+git clone - https://github.com/shreyakri803/System-Monitoring-Automation-Toolkit.git
 cd system-monitor
 ```
 
