@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login • System Health</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <style>
+    /* minimal inline fallback in case styles.css missing */
+    body{font-family:Arial,Helvetica,sans-serif;background:#0b1320;color:#e9edf1;margin:0}
+    .center{min-height:100vh;display:flex;align-items:center;justify-content:center}
+    .card{background:#121a2a;border:1px solid #1c2741;border-radius:12px;padding:22px;width:340px}
+    input,button{width:100%;padding:10px;margin:6px 0 12px;border-radius:8px;border:1px solid #1f2a44;background:#0e1728;color:#e9edf1}
+    button{border:0;background:#4da3ff;color:#051024;font-weight:700;cursor:pointer}
+    .alert{background:#39151b;border:1px solid #6a1f2b;color:#ffb3b8;padding:8px;border-radius:8px;margin-bottom:10px}
+  </style>
+</head>
+<body class="center">
+  <div class="card">
+    <h2>🔐 Sign in</h2>
+
+    {% if error_msg %}
+      <div class="alert">{{ error_msg }}</div>
+    {% endif %}
+
+    <form method="POST" action="/login" autocomplete="off" novalidate>
+      <label>Username</label>
+      <input type="text" name="username" required />
+
+      <label>Password</label>
+      <input type="password" name="password" required />
+
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
+</body>
+</html>

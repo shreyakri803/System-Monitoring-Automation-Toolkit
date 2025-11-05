@@ -1,2 +1,188 @@
-# System-Monitoring-Automation-Toolkit
-A real-time system monitoring dashboard built using Python, Flask, and psutil that tracks CPU, memory, disk, and network usage with secure login, CSV-based logging, alerting thresholds, and auto-refreshing UI updates every 3 seconds.
+# 🚀 System Monitoring & Automation Toolkit (Python + Flask + psutil)
+
+A real-time **system monitoring dashboard** that tracks CPU, Memory, Disk, and Network stats — built with **Python, Flask, psutil, threads, Prometheus metrics, secure auth**, and **auto-refresh front-end**.
+
+> Built to simulate IT automation / DevOps monitoring systems like Datadog, Nagios, and Grafana dashboards.
+
+---
+
+## ✨ Features
+
+✅ Secure login (hashed password via Werkzeug)
+✅ Live CPU, RAM, Disk, & alert bar view
+✅ Auto-refresh dashboard every **3 seconds**
+✅ Background system sampler thread
+✅ CSV logging + rotation
+✅ Plot-ready historical exports
+✅ Top processes API (like `htop`)
+✅ Prometheus `/metrics` endpoint
+✅ System health alerts (OK / Warning / Critical)
+✅ Easy deploy with Docker
+
+---
+
+## 📸 Live UI Screenshots (with Auto-Refresh)
+
+### **Login Screen**
+
+| Sign-in Page                                            |
+| ------------------------------------------------------- |
+| ![Login Screenshot](Screenshots\LoginPage.jpg) |
+
+---
+
+### **Real-Time Monitoring Dashboard**
+
+| Normal CPU Load                                   | Moderate Load (Warning)                             |
+| ------------------------------------------------- | --------------------------------------------------- |
+| ![Normal CPU](Screenshots\Screenshot 2025-11-05 224654.jpg) | ![Warning CPU](Screenshots\Screenshot 2025-11-05 224742.jpg) |
+
+| Critical High Load (Red Alert)                        | Auto-Refreshing Every 3 Seconds                                      |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| ![Critical CPU](Screenshots\Screenshot 2025-11-05 224759.jpg) | System updates continuously with fresh stats (no page reload needed) |
+
+🕒 **Auto-Refresh Interval:** every **3 seconds** (asynchronous fetch from `/data`)
+🎯 *Mimics professional live monitoring dashboards*
+
+---
+
+## 🧠 Architecture
+
+```
+Browser UI (JS fetch every 3s)
+        ↓
+Flask App ──> Auth ──> Dashboard
+        ↓
+Background Thread (Sampler)
+        ↓
+psutil → live metrics → memory + CSV
+        ↓
+/data        → front-end updates
+/top         → processes like htop
+/metrics     → Prometheus scrape
+/export/csv  → download logs
+```
+
+---
+
+## 🏗️ Tech Stack
+
+| Layer          | Tech                                     |
+| -------------- | ---------------------------------------- |
+| Backend        | Python, Flask                            |
+| System Metrics | psutil                                   |
+| Security       | Werkzeug hashing, secure session cookies |
+| Frontend       | HTML, CSS, JavaScript                    |
+| Observability  | Prometheus client                        |
+| Logging        | CSV with rotation                        |
+| Deployment     | Docker                                   |
+
+---
+
+## 📂 Folder Structure
+
+```
+📦 system-monitoring-tool
+ ┣ 📁 static
+ ┃ ┣ 📁 css
+ ┃ ┣ 📁 js
+ ┃ ┗ 📁 Screenshots       
+ ┣ 📁 templates
+ ┃ ┣ index.html
+ ┃ ┗ login.html
+ ┣ 📁 data            # CSV logs here
+ ┣ app.py
+ ┣ config.py
+ ┣ requirements.txt
+ ┣ Dockerfile
+ ┗ README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1) Clone Repo
+
+```bash
+git clone https://github.com/yourname/system-monitor.git
+cd system-monitor
+```
+
+### 2) Create Virtual Env
+
+```bash
+python -m venv .venv
+source .venv/bin/activate      # Windows: .\.venv\Scripts\activate
+```
+
+### 3) Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4) Run App
+
+```bash
+python app.py
+```
+
+Visit → `http://127.0.0.1:5000`
+
+Default user (if not using `.env`):
+
+```
+username: admin
+password: admin123
+```
+
+---
+
+## 🔥 API Endpoints
+
+| Endpoint      | Description                   |
+| ------------- | ----------------------------- |
+| `/`           | Live dashboard                |
+| `/data`       | Real-time JSON metrics        |
+| `/top`        | Top CPU processes (like htop) |
+| `/history`    | Pull past metrics             |
+| `/report`     | Stats summary                 |
+| `/export/csv` | Download logs                 |
+| `/metrics`    | Prometheus endpoint           |
+| `/login`      | Auth                          |
+| `/logout`     | End session                   |
+
+---
+
+## 🧪 Sample `/data` Output
+
+```json
+{
+  "cpu": 17.3,
+  "mem": 62.8,
+  "disk": 49.2,
+  "net": {
+    "bytes_sent": 9320815,
+    "bytes_recv": 21933824
+  },
+  "status": "OK"
+}
+```
+
+---
+
+## 🚧 Future Enhancements
+
+* Slack/Email alerts for spikes
+* Chart.js based graph dashboard
+* Windows service / Linux systemd unit
+* Grafana panel export
+* CPU temp + GPU support
+
+---
+
+## 👤 Author
+
+**Your Name**
+📎 LinkedIn: *linkedin.com/in/shreya-k-986a8321b*

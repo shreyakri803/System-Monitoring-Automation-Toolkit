@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>System Monitoring Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <style>
+    body{font-family:system-ui,Arial;margin:0;background:#0b1320;color:#e9edf1;display:flex;justify-content:center}
+    .wrap{width:380px;background:#121a2a;border:1px solid #1c2741;border-radius:16px;margin:16px;padding:16px}
+    h1{margin:0 0 12px 0;text-align:center}
+    .card{background:#0e1728;border:1px solid #1f2a44;border-radius:12px;padding:14px;margin:12px 0;text-align:center}
+    .label{font-weight:700;margin-bottom:6px}
+    .val{font-size:28px;margin:6px 0}
+    .bar{height:12px;background:#0d203d;border-radius:999px;overflow:hidden}
+    .fill{height:100%;background:#4da3ff;width:0%}
+    .ok{background:#4caf50}.warn{background:#f0ad4e}.crit{background:#d9534f}
+    .row{display:flex;gap:12px}
+    .row>.card{flex:1}
+    button{border:0;background:#e74c3c;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;width:100%}
+    small{opacity:.7}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>System Monitoring Dashboard</h1>
+
+    <div class="row">
+      <div class="card">
+        <div class="label">CPU Usage</div>
+        <div class="val" id="cpu-val">%</div>
+        <div class="bar"><div class="fill" id="cpu-bar"></div></div>
+      </div>
+      <div class="card">
+        <div class="label">Memory Usage</div>
+        <div class="val" id="mem-val">%</div>
+        <div class="bar"><div class="fill" id="mem-bar"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Alerts</div>
+      <div class="bar"><div class="fill ok" id="alert-bar" style="width:100%"></div></div>
+      <div id="status" style="margin-top:8px">OK</div>
+    </div>
+
+    <form action="/logout" method="get"><button type="submit">Logout</button></form>
+    <div style="text-align:right;margin-top:6px"><small id="next">Next update in 3s</small></div>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
