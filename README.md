@@ -27,20 +27,21 @@ A real-time **system monitoring dashboard** that tracks CPU, Memory, Disk, and N
 
 | Sign-in Page                                            |
 | ------------------------------------------------------- |
-| ![Login Screenshot] <img width="537" height="400" alt="image" src="https://github.com/user-attachments/assets/b923527b-4096-4c43-b0a9-2d93555c0786" />
- |
+|<img width="537" height="400" alt="image" src="https://github.com/user-attachments/assets/b923527b-4096-4c43-b0a9-2d93555c0786" />|
 
 ---
 
 ### **Real-Time Monitoring Dashboard**
 
-| Normal CPU Load                                   | Moderate Load (Warning)                             |
+| CPU Load-I                                        | CPU Load-II                                         |
 | ------------------------------------------------- | --------------------------------------------------- |
-| ![Normal CPU](Screenshots\Screenshot 2025-11-05 224654.jpg) | ![Warning CPU](Screenshots\Screenshot 2025-11-05 224742.jpg) |
+|<img width="490" height="419" alt="image" src="https://github.com/user-attachments/assets/e9b7c1df-a3cb-415d-a121-59cdd54e6374" />|
+|<img width="438" height="379" alt="image" src="https://github.com/user-attachments/assets/7cafede6-e07a-44f8-8fa5-7a172e4e2e09" />|
 
-| Critical High Load (Red Alert)                        | Auto-Refreshing Every 3 Seconds                                      |
+| CPU Load-III                                          | Auto-Refreshing Every 3 Seconds                                      |
 | ----------------------------------------------------- | -------------------------------------------------------------------- |
-| ![Critical CPU](Screenshots\Screenshot 2025-11-05 224759.jpg) | System updates continuously with fresh stats (no page reload needed) |
+| <img width="461" height="411" alt="image" src="https://github.com/user-attachments/assets/a61320a1-6b42-438e-859a-17be58ffc919" />|
+ | System updates continuously with fresh stats (no page reload needed) |
 
 🕒 **Auto-Refresh Interval:** every **3 seconds** (asynchronous fetch from `/data`)
 🎯 *Mimics professional live monitoring dashboards*
