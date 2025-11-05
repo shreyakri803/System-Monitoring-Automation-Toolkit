@@ -27,7 +27,8 @@ A real-time **system monitoring dashboard** that tracks CPU, Memory, Disk, and N
 
 | Sign-in Page                                            |
 | ------------------------------------------------------- |
-| ![Login Screenshot](Screenshots\LoginPage.jpg) |
+| ![Login Screenshot] <img width="537" height="400" alt="image" src="https://github.com/user-attachments/assets/b923527b-4096-4c43-b0a9-2d93555c0786" />
+ |
 
 ---
 
