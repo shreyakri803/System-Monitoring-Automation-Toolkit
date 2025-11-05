@@ -184,5 +184,5 @@ password: admin123
 
 ## 👤 Author
 
-**Your Name**
+**Shreya Kumari**
 📎 LinkedIn: *linkedin.com/in/shreya-k-986a8321b*
